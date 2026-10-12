@@ -1,25 +1,20 @@
-# PocketFlow
+# PocketFlow Web MVP
 
-A free, offline Android personal cash-flow tracker. No ads, subscriptions, paid APIs, account, analytics SDK, cloud sync, or bank login. Money and transaction data stay in app-private storage on the device.
+This is a self-contained browser preview of the PocketFlow cash-flow tracker. It runs without a server, account, paid API, or build step. It stores the demo entries only in the current browser's local storage.
 
-## MVP features
+## Publish a test link with GitHub Pages
 
-- Enter monthly salary and recurring fixed costs such as rent.
-- Record daily expenses and choose a category.
-- See this month's salary, fixed costs, confirmed spending, and remaining balance.
-- Optionally detect transaction-like Android notifications, then review, categorize, confirm, or ignore them.
-- Remove entries from recent activity.
+1. Extract this ZIP file on your computer.
+2. In your `pocket-flow` GitHub repository, choose **Add file → Upload files**.
+3. Upload `index.html` and this `README.md` to the repository root, then commit the changes to `main`.
+4. In the repository, open **Settings → Pages**.
+5. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/(root)`, then save.
+6. When GitHub Pages finishes publishing, open: https://mundadaankit2424-dev.github.io/pocket-flow/
 
-## Try the app
+GitHub says project sites use the `USERNAME.github.io/REPOSITORY` address. Publishing can take a few minutes after the first setup.
 
-Download the latest APK from the [Releases page](https://github.com/mundadaankit2424-dev/pocket-flow/releases/latest). On Android, open the downloaded APK and allow installation from your browser or file manager if prompted. This is a debug build for personal testing; it is not listed on Google Play.
+## Try it
 
-For a new build, use the **Build PocketFlow APK** workflow in the Actions tab. Each run publishes an APK artifact. A version tag such as `v0.1.0` publishes a stable APK under Releases.
+Use **Salary**, **Fixed cost**, and **Expense** to change the sample summary. **Simulate bank alert** adds an item to the review list; use **Confirm** or **Ignore**. Refreshing the same browser keeps its entries. **Reset** browser site data to return to the sample state.
 
-## Build locally
-
-Open this folder in Android Studio and run the app on your Android phone. The app does not require a server or paid service. Enable notification access from the button in the app only if you want automatic capture.
-
-## Limits
-
-Bank and UPI notification wording differs. Detection is heuristic and may miss an alert, extract the wrong amount, or suggest the wrong merchant/category, so review each captured alert. The app does not read bank SMS, connect to accounts, or provide banking advice. Data is local to this installation; uninstalling the app may erase it. Back up your device if you need to preserve it.
+This is a web mockup for reviewing the screens and flow. Browsers cannot read Android banking notifications, so the transaction button is simulated. Real notification capture belongs in the native Android app.
