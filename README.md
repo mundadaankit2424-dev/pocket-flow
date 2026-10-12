@@ -1,26 +1,11 @@
-# PocketFlow Web MVP
+# PocketFlow Android launcher icon update
 
-Self-contained browser preview of the PocketFlow cash-flow tracker. No build step, backend, account, paid API, or external library is needed. Demo data is saved in local storage in your browser.
+Copy the files into the matching locations in your Android project. These are native Android adaptive launcher icons for Android 8.0 and later.
 
-## Publish with GitHub Pages
+- Replace `app/src/main/AndroidManifest.xml` with the included manifest.
+- Copy `app/src/main/res/drawable/ic_pocketflow_foreground.xml`.
+- Copy both files in `app/src/main/res/mipmap-anydpi-v26/`.
+- Copy `app/src/main/res/values/colors.xml` (merge the color entry if that file already exists).
+- `pocketflow-app-icon.svg` is a standalone preview of the mark.
 
-1. Extract the ZIP on your computer.
-2. In your `pocket-flow` repository, choose **Add file → Upload files**.
-3. Upload `index.html` and this `README.md` to the repository root; commit to `main`.
-4. Open **Settings → Pages**. Under **Build and deployment**, select **Deploy from a branch**, choose `main` and `/(root)`, then save.
-5. After publishing, open: https://mundadaankit2424-dev.github.io/pocket-flow/
-
-GitHub project pages use the `USERNAME.github.io/REPOSITORY` address, and first publication may take a few minutes. See [GitHub Pages quickstart](https://docs.github.com/en/pages/quickstart?library=true).
-
-## Preview features
-
-- **Home:** salary, monthly planned costs, confirmed daily spending, and remaining balance.
-- **Activity:** confirm or ignore simulated bank transaction alerts; add manual expenses.
-- **Plan:** add monthly recurring costs, set a due day, and see the total planned for the month. Remove costs with ×.
-- **Spending calculator:** enter a possible purchase and a savings amount to see the projected balance and average safe amount per day for the rest of the month.
-- **Calculator:** use a separate everyday calculator for addition, subtraction, multiplication, division, percentages and sign changes.
-- **Settings:** change your display name, salary, day-to-day budget, and currency. Reset demo data stored by this browser.
-
-This is a web preview. Transaction alerts are simulated; only the native Android app can request Android notification access. The web preview does not read SMS or Android notifications.
-
-
+The manifest points the launcher at the new adaptive icon. Build and reinstall the app to see it on your phone.
