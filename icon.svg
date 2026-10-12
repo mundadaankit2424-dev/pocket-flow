@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" role="img" aria-label="PocketFlow app icon">
+  <rect width="108" height="108" rx="27" fill="#285B45"/>
+  <circle cx="84" cy="24" r="17" fill="#ffffff" opacity=".055"/>
+  <rect x="28" y="31" width="52" height="47" rx="8" fill="#EAF3E2"/>
+  <path d="M28 43h52v9H28z" fill="#B8D99A"/>
+  <path d="M37 68h10l8-9 8 6 12-13m-8 0h8v8" fill="none" stroke="#285B45" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="72" cy="64" r="5.5" fill="#D7F078"/>
+</svg>

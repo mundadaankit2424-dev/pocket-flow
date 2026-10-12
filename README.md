@@ -1,26 +1,30 @@
 # PocketFlow
 
-PocketFlow is a free, offline Android cash-flow tracker for personal use. It has no ads, subscriptions, paid APIs, account, analytics SDK, cloud sync, or bank login. Financial entries are stored locally on the phone.
-
-## Upload this project to GitHub
-
-1. Download and extract this ZIP.
-2. In your `pocket-flow` repository, choose **Add file → Upload files**.
-3. Upload the extracted project's contents to the repository root, keeping the folders in place. The root should contain `app`, `.github`, `build.gradle.kts`, and `settings.gradle.kts`.
-4. Commit the upload. In particular, check that GitHub shows `.github/workflows/build-apk.yml` at exactly that path. If the upload page skips the hidden `.github` folder, create or replace that file in GitHub at that exact path using the included workflow file.
-5. Open **Actions → Build PocketFlow APK** and wait for the run to finish successfully.
-6. When the build is green, install the APK from the repository's **Releases → PocketFlow MVP** page. Android may ask you to allow installs from your browser or file manager.
-
-The ZIP itself is source code and cannot be installed on Android. The generated `.apk` is the installable app.
+PocketFlow is a free personal Android cash-flow tracker. There are no ads, subscriptions, paid APIs, accounts, analytics SDKs, cloud sync, or bank login. Salary, monthly costs, and spending entries are stored on this phone.
 
 ## Features
 
-- Add monthly salary and fixed recurring expenses such as rent.
-- Record daily expenses and choose a category.
-- See this month's salary, fixed costs, spending, and remaining balance.
-- Optionally detect transaction-like Android notifications, then review, categorize, confirm, or ignore them.
-- Use the built-in expense calculator.
+- Set monthly salary and recurring costs such as rent and bills.
+- Track daily expenses, use the built-in spending calculator and regular calculator.
+- Optionally capture likely debit alerts from bank apps and SMS alerts displayed by your Messages app.
+- Review each detected alert before it changes your tracked spending. OTP and obvious incoming credit/refund alerts are skipped.
 
-## Limitations
+## Notification access and SMS
 
-Bank and UPI notification wording differs. Detection may miss alerts or suggest an incorrect amount, merchant, or category; review captured alerts. The app reads Android notifications only after notification access is enabled. It does not read bank SMS, connect to bank accounts, or provide banking advice. Data stays on the device and may be removed if the app is uninstalled.
+To capture new bank alerts, open PocketFlow Settings, tap Enable, then enable PocketFlow under Android's Notification access settings. Android sends the app notification content from apps you allow through this system setting. SMS alerts can be captured when your Messages app displays them as notifications.
+
+PocketFlow does not request permission to read the SMS inbox and does not import old messages. It does not save the full notification text; it keeps a suggested amount, merchant text, category, and date on this device for your review. Detection depends on the wording used by your bank and may miss an alert or suggest the wrong amount/category. Always review before confirming.
+
+## Build and install from GitHub
+
+1. Extract this ZIP on your computer.
+2. Upload the contents inside the extracted PocketFlow folder to the root of your GitHub repository. Keep folder paths intact. In particular, confirm that .github/workflows/build-apk.yml exists in the repository; GitHub may hide .github in some upload screens.
+3. On GitHub, open Actions and select Build PocketFlow APK. The workflow starts after the files are pushed to the main branch; you can also run it with Run workflow.
+4. When the workflow succeeds, open the repository's Releases page and download app-debug.apk from PocketFlow MVP.
+5. Open the APK on your Android phone and allow installation when Android asks.
+
+The workflow also attaches the APK to the run under Artifacts. This project contains source files, not a prebuilt APK. GitHub Actions builds the installable APK using free hosted tooling; Android Studio can also open this folder and build it locally.
+
+## Limits
+
+This is a personal-use MVP, not a bank-connected product or financial advice. Data stays on this installation and may be erased if the app is uninstalled. Android's notification access is optional and can be turned off in system settings.
