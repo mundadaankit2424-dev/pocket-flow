@@ -1,20 +1,26 @@
 # PocketFlow Web MVP
 
-This is a self-contained browser preview of the PocketFlow cash-flow tracker. It runs without a server, account, paid API, or build step. It stores the demo entries only in the current browser's local storage.
+Self-contained browser preview of the PocketFlow cash-flow tracker. No build step, backend, account, paid API, or external library is needed. Demo data is saved in local storage in your browser.
 
-## Publish a test link with GitHub Pages
+## Publish with GitHub Pages
 
-1. Extract this ZIP file on your computer.
-2. In your `pocket-flow` GitHub repository, choose **Add file → Upload files**.
-3. Upload `index.html` and this `README.md` to the repository root, then commit the changes to `main`.
-4. In the repository, open **Settings → Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/(root)`, then save.
-6. When GitHub Pages finishes publishing, open: https://mundadaankit2424-dev.github.io/pocket-flow/
+1. Extract the ZIP on your computer.
+2. In your `pocket-flow` repository, choose **Add file → Upload files**.
+3. Upload `index.html` and this `README.md` to the repository root; commit to `main`.
+4. Open **Settings → Pages**. Under **Build and deployment**, select **Deploy from a branch**, choose `main` and `/(root)`, then save.
+5. After publishing, open: https://mundadaankit2424-dev.github.io/pocket-flow/
 
-GitHub says project sites use the `USERNAME.github.io/REPOSITORY` address. Publishing can take a few minutes after the first setup.
+GitHub project pages use the `USERNAME.github.io/REPOSITORY` address, and first publication may take a few minutes. See [GitHub Pages quickstart](https://docs.github.com/en/pages/quickstart?library=true).
 
-## Try it
+## Preview features
 
-Use **Salary**, **Fixed cost**, and **Expense** to change the sample summary. **Simulate bank alert** adds an item to the review list; use **Confirm** or **Ignore**. Refreshing the same browser keeps its entries. **Reset** browser site data to return to the sample state.
+- **Home:** salary, monthly planned costs, confirmed daily spending, and remaining balance.
+- **Activity:** confirm or ignore simulated bank transaction alerts; add manual expenses.
+- **Plan:** add monthly recurring costs, set a due day, and see the total planned for the month. Remove costs with ×.
+- **Spending calculator:** enter a possible purchase and a savings amount to see the projected balance and average safe amount per day for the rest of the month.
+- **Calculator:** use a separate everyday calculator for addition, subtraction, multiplication, division, percentages and sign changes.
+- **Settings:** change your display name, salary, day-to-day budget, and currency. Reset demo data stored by this browser.
 
-This is a web mockup for reviewing the screens and flow. Browsers cannot read Android banking notifications, so the transaction button is simulated. Real notification capture belongs in the native Android app.
+This is a web preview. Transaction alerts are simulated; only the native Android app can request Android notification access. The web preview does not read SMS or Android notifications.
+
+
